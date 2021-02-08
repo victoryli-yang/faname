@@ -39,3 +39,5 @@ cypress/fixtures/example.json
 
 *.iml
 *.7z
+
+test.bean
