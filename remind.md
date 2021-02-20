@@ -2,7 +2,7 @@
  * @Author: vic-hu
  * @LastEditors: vic-hu
  * @Date: 2020-11-12 16:42:54
- * @LastEditTime: 2021-01-27 11:21:02
+ * @LastEditTime: 2021-02-19 16:16:12
  * @Description:
  * @FilePath: /remind.md
 -->
@@ -15,7 +15,7 @@ config.json -- 配置文件项
 file.json -- csv路径和导出路径项
 priceConfig.json -- 股票基金配置项
 main.js -- 批量处理 csv 的脚本
-price.js -- 获取股票基金20天价格，并生成 price 文件(注：持续写入
+price.js -- 获取股票基金 t+1 日价格，并生成 price 文件(注：持续写入
 
 ### bean 文件
 
