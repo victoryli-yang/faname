@@ -2,7 +2,7 @@
  * @Author: vic-hu
  * @LastEditors: vic-hu
  * @Date: 2020-11-12 16:42:54
- * @LastEditTime: 2021-02-19 16:16:12
+ * @LastEditTime: 2023-01-13 14:48:38
  * @Description:
  * @FilePath: /remind.md
 -->
@@ -50,3 +50,23 @@ pip install -U fava  // 升级 fava
 
 // 运行 web
 fava main.bean
+
+### 自动化处理(不完善)
+
+流程思路
+1.通过信用卡账单归集数据
+  - ceb 电子邮件 -> pdf 导出
+  - cmb 电子对账单下载
+2.Excalibur 处理 pdf -> 导出 csv 文件
+3.node 脚本批量处理 csv -> 导出 bean 文件
+
+问题
+1. Excalibur 处理 pdf 表格文件识别准确率不够高依旧需要人工干预
+2. 导出 对帐单流程 比较麻烦
+3. 无法对多种账单处理，需要修改代码，最好处理成可配制化
+
+### Excalibur 简介
+
+Excalibur 是一个 pdf 表格识别工具 依赖 camelot
+所以需要安装 camelot 在安装 ghostscript
+前者需要 python 后者需要 brew
