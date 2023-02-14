@@ -2,7 +2,7 @@
  * @Author: vic-hu
  * @LastEditors: vic-hu
  * @Date: 2020-11-12 16:42:54
- * @LastEditTime: 2023-01-13 14:48:38
+ * @LastEditTime: 2023-02-14 11:20:26
  * @Description:
  * @FilePath: /remind.md
 -->
@@ -70,3 +70,21 @@ fava main.bean
 Excalibur 是一个 pdf 表格识别工具 依赖 camelot
 所以需要安装 camelot 在安装 ghostscript
 前者需要 python 后者需要 brew
+
+```bash
+  excalibur webserver #启动命令
+```
+
+Excalibur 本地版本已经被魔改过，操作项目都不需要操作，
+下载页面点下载会跳转，此时表明文件已经被保存到本地目录下（303文件夹）
+
+### bql 示例
+
+```sql
+  SELECT * FROM 'Liabilities:CreditCard:CEB'
+  where (year = 2022 and month = 8 and day >10)
+  or (year = 2022 and month = 9 and day <10)
+  and number(convert(units(position), 'CNY')) > 0
+  and flag = '*'
+  -- 查询 2022-08-10 到 2022-09-10 之间的 cny > 0 的消费
+```
